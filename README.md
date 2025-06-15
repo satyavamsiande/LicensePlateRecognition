@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <h1 align="center"> Indian_LPR</h1>
 <h3 align="center">Indian License Plate dataset in wild</h3>
@@ -218,3 +219,6 @@ Please cite the paper @misc{tanwar2021indian,
 }
 , if you benefit from this dataset.
 <hr />
+=======
+# LicensePlateRecognition
+>>>>>>> 4fb706404ac5e54f88239f1ad2aa62a3f7e5a631
