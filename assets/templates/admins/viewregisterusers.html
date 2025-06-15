@@ -1,0 +1,79 @@
+{% extends 'admins/adminbase.html'%}
+{%load static%}
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+{%block contents%}
+<section id="aboutUs"><!--Aboutus-->
+    <div class="inner_wrapper aboutUs-container fadeInLeft animated wow">
+        <div class="container">
+            <h2>Deep Learning Methods for License Plate Recognition</h2>
+            <h2>View Registered Users</h2>
+                <p>
+                    <table id="customers" class="table table-bordered bg-light text-dark">
+    <thead>
+      <tr style="color:red;font-weight:bold;">
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Login ID</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Locality</th>
+        <th>Status</th>
+        <th>Activate</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in data %}
+                                            <tr style="color: Green">
+                                                <td>{{forloop.counter}}</td>
+                                                <td>{{i.name}}</td>
+                                                <td>{{i.loginid}}</td>
+                                                <td>{{i.mobile}}</td>
+                                                <td>{{i.email}}</td>
+                                                <td>{{i.locality}}</td>
+                                                <td>{{i.status}}</td>
+
+                                                {% if i.status == 'waiting' %}
+                                                <td><a class="btn-link" href="/ActivaUsers/?uid={{ i.id }}"
+                                                       style="color:DARKBLUE">Activate</a></td>
+                                                {% else %}
+                                                <td> Activated/ <a class="btn-link" href="/BlockUsers/?uid={{ i.id }}"
+                                                       style="color:DARKBLUE">Block</a></td>
+                                                {% endif %}
+                                            </tr>
+                                            {% endfor %}
+
+    </tbody>
+  </table>
+                </p>
+
+        </div>
+    </div>
+</section>
+
+
+
+{%endblock%}

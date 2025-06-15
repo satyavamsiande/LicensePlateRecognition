@@ -1,0 +1,62 @@
+{% extends 'users/userbase.html'%}
+{%load static%}
+{%block contents%}
+<section id="aboutUs"><!--Aboutus-->
+    <div class="inner_wrapper aboutUs-container fadeInLeft animated wow">
+        <div class="container">
+            <h2>Deep Learning Methods for License Plate Recognition</h2>
+            <h6>Learning-based algorithms for automated license plate recognition implicitly assume that the training
+                and test data are well aligned. However, this may not be the case under extreme environmental
+                conditions, or in forensic applications where the system cannot be trained for a specific acquisition
+                device. Predictions on such out-of-distribution images have an increased chance of failing. But this
+                failure case is oftentimes hard to recognize for a human operator or an automated system. Hence, in this
+                work we propose to model the prediction uncertainty for license plate recognition explicitly. Such an
+                uncertainty measure allows to detect false predictions, indicating an analyst when not to trust the
+                result of the automated license plate recognition</h6>
+            <div class="inner_section">
+                <div class="row">
+                    <div class="col-lg-12 about-us">
+                        <div class="row">
+                            <div class="col-md-6"><img class="img-responsive" src="{%static 'img/about1.jpg'%}"
+                                                       align=""></div><!-- /.col-md-6 -->
+                            <div class="col-md-6">
+                                <h3>Automatic License Plate Recognition</h3>
+                                <p>
+                                    We improve the reliability of license plate recognition by utilizing three
+                                    probabilistic deep learning techniques: deep ensembles, BatchEnsemble, and Monte
+                                    Carlo dropout. To the best of our knowledge, this is
+                                    the first work to explore probabilistic deep learning for
+                                    automatic license plate recognition. We investigate the
+                                    opportunities of this approach, with particular focus on
+                                    the automated detection of misclassifications
+                                </p>
+
+                                <p>
+                                    The methods are tested on out-of-distribution data to
+                                    compare the expressiveness of the predictive uncertainty
+                                    for license plate recognition. To this end, the test images
+                                    contain different forms of degradation, specifically noise
+                                    and blur. We show that the deep ensemble and MCdropout achieve the best results
+                                </p>
+                                <p>
+                                    We improve the predictive uncertainty within a multitask learning framework that
+                                    combines super-resolution
+                                    and license plate recognition. The experiments show that
+                                    the combination outperforms license plate recognition
+                                    only in terms of accuracy and predictive uncertainty
+                                </p>
+
+                            </div><!-- /.col-md-6 -->
+
+                        </div><!-- /.row -->
+                    </div><!-- /.col-lg-12 -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{%endblock%}
